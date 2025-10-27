@@ -93,7 +93,7 @@ class Cuantitativos:
             else:
                 return self.datos[k]
 
-    # --- Tarea 6: Rango Intercuartílico (IQR) ---
+    # --- Rango Intercuartílico ---
     def calcular_cuartiles_iqr(self):
         """
         Calcula Q1, Q3 y el IQR (Q3 - Q1).
@@ -107,4 +107,22 @@ class Cuantitativos:
             "q3": q3,
             "iqr": iqr
         }
+
+    def calcular_minimo(self):
+        """
+        Calcula el valor mínimo (usa la lista ya ordenada).
+        """
+        return self.datos[0]
+
+    def calcular_maximo(self):
+        """
+        Calcula el valor máximo (usa la lista ya ordenada).
+        """
+        return self.datos[-1]
+
+    def calcular_rango(self):
+        """
+        Calcula el Rango (Max - Min).
+        """
+        return self.calcular_maximo() - self.calcular_minimo()
 
